@@ -27,7 +27,5 @@ This project demonstrates basic CRUD (Create, Read, Update, Delete) operations f
 | **HTML5 / CSS3** | Frontend UI |
 | **Bootstrap (optional)** | For styling and responsiveness |
 
----
 
-## 📂 Project Structure
 
