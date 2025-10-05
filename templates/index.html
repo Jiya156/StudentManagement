@@ -1,0 +1,35 @@
+{% include "header.html" %}
+ 
+
+        /* Student List */
+        .student-list {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .student-name {
+            font-size: 1.2rem;
+            color: #155724;
+            font-weight: bold;
+            padding: 5px;
+        }
+    </style>
+
+    <!-- Student List with Additional Spacing -->
+    <div class="container mt-section">
+        <h3 class="text-center text-success">List of Student Names</h3>
+        <div class="student-list">
+            {% for i in names %}
+            <p class="student-name">{{ i }}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+
+</html>

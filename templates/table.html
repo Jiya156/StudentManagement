@@ -1,0 +1,101 @@
+{% include "header.html" %}
+
+    /* Table Styling */
+    #student-table-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 60px;
+        margin-top: 150px;
+    }
+
+    #student-table {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .table thead {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f0f8f0;
+    }
+
+    .btn-warning {
+        color: white;
+    }
+
+    .btn-warning:hover {
+        background-color: #ffcc00;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    /* Responsive Table */
+    @media (max-width: 768px) {
+        #student-table-title {
+            font-size: 1.5rem;
+        }
+    }
+
+    #home-btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        text-align: center;
+        background: #218838;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #home-btn:hover {
+        background: #1e7e34;
+    }
+    </style>
+
+    <div class="container mt-4">
+        <h2 id="student-table-title" class="text-center text-success">Student Table</h2>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered table-hover text-center" id="student-table">
+                <thead class="table-success">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Roll Number</th>
+                        <th>Course</th>
+                        <th>Semester</th>
+                        <th>Batch</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{ i.Name }}</td>
+                        <td>{{ i.Email }}</td>
+                        <td>{{ i.Roll_Number }}</td>
+                        <td>{{ i.Course }}</td>
+                        <td>{{ i.Semester }}</td>
+                        <td>{{ i.Batch }}</td>
+                        <td>
+                            <a href="/update/{{ i.id }}" class="btn btn-warning btn-sm">Update</a>
+                            <a href="/delete/{{ i.id }}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="/home" id="home-btn">Go to Home</a>
+    
+</body>
+</html>

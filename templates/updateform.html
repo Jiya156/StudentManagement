@@ -1,0 +1,101 @@
+{% include "header.html" %}
+
+    /* Centering the form container */
+    #update-student-form {
+        background: #e9f5e9; /* Light green */
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        border-left: 5px solid #28a745;
+    }
+
+    /* Title Styling */
+    #update-student-title {
+        text-align: center;
+        color: #28a745;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Form Labels */
+    label {
+        font-weight: bold;
+        color: #218838;
+        margin-top: 10px;
+    }
+
+    /* Input Fields */
+    input[type="text"], input[type="email"], input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    /* Submit Button */
+    #update-student-submit {
+        width: 100%;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #update-student-submit:hover {
+        background-color: #218838;
+    }
+
+    #home-btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        text-align: center;
+        background: #218838;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #home-btn:hover {
+        background: #1e7e34;
+    }
+</style>
+
+    <h1 id="update-student-title">Update Student</h1>
+
+    <form id="update-student-form" action="/submitupdate/{{ stu.id }}" method="GET">
+        <label for="name">Name</label>
+        <input type="text" name="Name" id="name" value="{{ stu.Name }}">
+
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email" value="{{ stu.Email }}">
+
+        <label for="roll">Roll Number</label>
+        <input type="number" name="Roll_Number" id="roll" value="{{ stu.Roll_Number }}">
+
+        <label for="course">Course</label>
+        <input type="text" name="Course" id="course" value="{{ stu.Course }}">
+
+        <label for="semester">Semester</label>
+        <input type="number" name="Semester" id="semester" value="{{ stu.Semester }}">
+
+        <label for="batch">Batch</label>
+        <input type="number" name="Batch" id="batch" value="{{ stu.Batch }}">
+
+        <input type="submit" id="update-student-submit" value="Update">
+    </form>
+
+    <a href="/home" id="home-btn">Go to Home</a>
+
+</body>
+</html>

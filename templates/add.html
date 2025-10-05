@@ -1,0 +1,122 @@
+{% include "header.html" %}
+    
+    <style>
+        /* Add Student Page - Green Theme */
+        body#add-student-page {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e9f5e9;
+            /* Light green background */
+            padding: 20px;
+        }
+
+        /* Page Title */
+        #add-student-title {
+            margin-top: 30px;
+            text-align: center;
+            color: #218838;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        /* Form Container */
+        #add-form-container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #28a745;
+            /* Emphasized green border */
+        }
+
+        /* Labels */
+        #add-form-container label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #155724;
+        }
+
+        /* Input Fields */
+        #add-form-container input[type="text"],
+        #add-form-container input[type="email"],
+        #add-form-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Submit Button */
+        #add-submit-btn {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #add-submit-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Home Button */
+        #home-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            background: #218838;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #home-btn:hover {
+            background: #1e7e34;
+        }
+    </style>
+
+    <!-- Title -->
+    <h1 id="add-student-title">Add Student</h1>
+
+    <!-- Form Container -->
+    <div id="add-form-container">
+        <form action="/store/">
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" id="name-input">
+
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="email-input">
+
+            <label for="Roll_Number">Roll Number:</label>
+            <input type="number" name="Roll_Number" id="roll-input">
+
+            <label for="Course">Course:</label>
+            <input type="text" name="Course" id="course-input">
+
+            <label for="Semester">Semester:</label>
+            <input type="number" name="Semester" id="semester-input">
+
+            <label for="Batch">Batch:</label>
+            <input type="number" name="Batch" id="batch-input">
+
+            <input type="submit" value="Add" id="add-submit-btn">
+        </form>
+    </div>
+
+    <!-- Home Button -->
+    <a href="/home" id="home-btn">Go to Home</a>
+
+</body>
+
+</html>

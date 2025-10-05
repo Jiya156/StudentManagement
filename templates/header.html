@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body id="student-page">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Student Management System</a>
+            <div>
+                <a href="/add" class="btn btn-light">Add Student</a>
+                <a href="/table" class="btn btn-outline-light">View Student Table</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Info Section -->
+    <div class="container info-section">
+        <h2>Welcome to the Student Management System</h2>
+        <p>
+            This system allows you to manage student information efficiently.
+            You can <strong>add, view, update, and delete</strong> student records with ease.
+        </p>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8f0;
+            padding: 20px;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            padding: 15px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .btn {
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+
+        /* Info Section - Standout Box */
+        .info-section {
+            background: #e9f5e9;
+            /* Light green background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #28a745;
+            /* Green left border for emphasis */
+            text-align: center;
+            max-width: 80%;
+            margin: 30px auto;
+            /* Centering and spacing */
+        }
+
+        /* View Table Button */
+        .btn-outline-light {
+            border-color: white;
+            color: white;
+        }
+
+        .btn-outline-light:hover {
+            background-color: white;
+            color: #28a745;
+        }
+
+        /* Spacing between sections */
+        .mt-section {
+            margin-top: 50px;
+        }
+    
